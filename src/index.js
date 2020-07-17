@@ -93,7 +93,7 @@ export default class Maplicious {
 		const filtered = new Maplicious();
 
 		this.#entries.forEach(([key, value]) => {
-			if (callback(key, value, this)) {
+			if (callback(value, key, this)) {
 				filtered.set(key, value);
 			}
 		});

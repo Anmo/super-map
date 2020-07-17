@@ -1,8 +1,16 @@
 {
   "name": "maplicious",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anmo/super-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Anmo/super-map/issues"
+  },
+  "homepage": "https://github.com/Anmo/super-map#readme",
   "scripts": {
     "prepare": "yarn build",
     "prebuild": "rm -rf dist",
