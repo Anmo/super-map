@@ -1,0 +1,40 @@
+{
+  "name": "super-map",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "yarn build",
+    "prebuild": "rm -rf dist",
+    "build": "babel src -d dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-private-methods": "^7.10.4",
+    "babel-preset-minify": "^0.5.1"
+  },
+	"files": [
+		"dist"
+	],
+  "babel": {
+    "presets": [
+      "minify"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-private-methods",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  }
+}
