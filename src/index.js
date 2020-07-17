@@ -1,4 +1,4 @@
-export default class SuperMap {
+export default class Maplicious {
 	#keys = [];
 	#values = [];
 	#entries = [];
@@ -90,7 +90,7 @@ export default class SuperMap {
 		return this.#entries.reduce((accum, [key, value]) => callback(accum, value, key, this), initialValue);
 	}
 	filter(callback) {
-		const filtered = new SuperMap();
+		const filtered = new Maplicious();
 
 		this.#entries.forEach(([key, value]) => {
 			if (callback(key, value, this)) {
