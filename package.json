@@ -1,6 +1,6 @@
 {
   "name": "maplicious",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": {
@@ -21,13 +21,20 @@
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-private-methods": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
     "babel-preset-minify": "^0.5.1"
   },
-	"files": [
-		"dist"
-	],
+  "files": [
+    "dist"
+  ],
   "babel": {
     "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": "cjs"
+        }
+      ],
       "minify"
     ],
     "plugins": [
