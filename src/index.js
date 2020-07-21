@@ -4,11 +4,7 @@ export default class Maplicious {
 	#entries = [];
 
 	constructor(iterable = []) {
-		for (const key in iterable) {
-			if (!iterable.hasOwnProperty(key)) { continue; }
-
-			const value = iterable[key];
-
+		for (const [key, value] of iterable) {
 			this.#keys.push(key);
 			this.#values.push(value);
 			this.#entries.push([key, value]);
